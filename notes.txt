@@ -1,0 +1,50 @@
+1)
+instead of using the hard coded route name we use this
+we use Express Route Parameters to get dynamic routes
+snippet for this is
+app.get("/category/:<paramName>",function(req,res){
+    //Access req.params.paramName
+});
+
+2)
+To find whether that particular item exist in db or not
+we use Mongoose findOne() method
+code snippet for the same
+<ModelName>.findOne({conditions},function(err,results){
+    //use the found results docs.
+});
+
+3)
+to drop a complete db we use
+first go to that db then
+db.dropDatabase()
+
+4)
+to drop the data present in a particular collection
+first go to that db then
+db.<listName>.drop()
+
+5)
+Mongoose findOneAndUpdate() method
+<ModelName>.findOneAndUpdate({conditions},{updates},function(err,results){});
+
+here updates will be{$pull:{field:{query}}}
+query will be '_id:value'
+field will take a array
+query will take a array element which has to be searched in the given array
+
+6)
+using lodash we will capitalize the name of route entered dynamically by the user
+
+7)
+usage of .env file: it is mainly added to store the credentials which should not be seen in public
+1. create a env file and store the credentials
+2. then use npm to install dotenv
+3. require it in app.js 
+4. add this .env file into .gitignore file so it is not pushed to public space
+5. where ever you are putting this web service upload the contents of env file as environment variables 
+6. for more info refer Q/A section of lecture 352 user name:Ashutosh Q/A topic:Finally hosted my todolist using Render.
+
+8)
+link of video for using render is
+https://www.youtube.com/watch?v=w96ZahIzmmk
