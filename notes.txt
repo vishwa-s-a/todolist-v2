@@ -48,3 +48,9 @@ usage of .env file: it is mainly added to store the credentials which should not
 8)
 link of video for using render is
 https://www.youtube.com/watch?v=w96ZahIzmmk
+
+in this video he gives: npm install && npm build run
+instead of this give only: npm install, ( as this will install all the required node_modules for the server)
+
+in this video he gives: npm start
+instead of this give only:app.js, ( so that the render knows which .js file has to be run to start the server )
